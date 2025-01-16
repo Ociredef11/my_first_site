@@ -1,22 +1,104 @@
-body {
-    font-family: open sans ,  sans-serif; /* La famiglia del font */
-    font-size: 22px; /* La dimensione del font principale nei tag <p></p> */
-    background-color: #f2f1f1; /* Il colore dello sfondo della pagina web */
-    color: #000000; /* Il colore del testo */ 
+@keyframes color-change {
+  42% {
+      color: #af8997;
+  }
+  15% {
+      color: red;
+  }
+  43% {
+      color: rgb(97, 97, 97);
+  }
 }
+
+@keyframes color-change1 {
+  50% {
+      color: #f4e700;
+  }
+  15% {
+      color: rgb(0, 0, 0);
+  }
+  35% {
+      color: rgb(255, 255, 255);
+  }
+}
+
+body {    
+  font-family: open sans, sans-serif;
+  font-size: 22px;
+  background-color: #f2f1f1;
+  color: #000000;
+  padding: 20px; /* Padding per distanziare il contenuto */
+}
+
 h1 {
-    border: #ffffff00;
-    color: #000000; /* Il colore dell'intestazione */
-    font-size: 30x; /* La dimensione del font dell'intestazione */
-    font-family: open sans , sans-serif; /* La famiglia del font usata nell'intestazione */
+  border: #ffffff00;
+  color: #000000;
+  font-size: 30px; /* Corretto da 30x a 30px */
+  font-family: open sans, sans-serif;
+  margin-bottom: 20px;
 }
+
 h3 {
-    font-size: 22px;
-    color: #af8997;
-    font-family: open sans , sans-serif;
+  font-size: 22px;
+  color: #af8997;
+  font-family: open sans, sans-serif;
+  transition: color 0.3s ease; /* Aggiunta transizione al colore */
 }
+
 h4 {
-    font-size: 20px;
-    color: #ffd000;
-    font-family: open sans , sans-serif;
+  font-size: 20px;
+  color: #ffd000;
+  font-family: open sans, sans-serif;
+  transition: color 0.3s ease; /* Aggiunta transizione al colore */
+}
+
+h3:hover {
+  animation: color-change 3s infinite;
+}
+
+h4:hover {
+  animation: color-change1 3s infinite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007BFF;
 }
